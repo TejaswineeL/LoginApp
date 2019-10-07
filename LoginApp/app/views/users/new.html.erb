@@ -1,0 +1,32 @@
+
+
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages' %><br><br>
+<%= f.label :name %>
+<%= f.text_field :name %><br><br>
+
+<%= f.label :gender %>
+      <%= f.radio_button :gender, 'male', :checked => true %> 
+  <%= label :gender_Male, 'Male' %>
+  <%= f.radio_button :gender, 'female' %>
+  <%= label :gender_Female, 'Female' %><br><br>
+
+<%= f.label :DOB, "Date Of Birth " %>
+<%= f.date_field :DOB %><br><br>
+<%= f.label :email %>
+<%= f.email_field :email %><br><br>
+<%= f.label :address %>
+<%= f.text_area :address %><br><br>
+<%= f.label :phone %>
+<%= f.telephone_field :phone %><br><br>
+<%= f.label :password %>
+<%= f.password_field :password %><br><br>
+<%= f.label :password_confirmation, "Confirmation" %>
+<%= f.password_field :password_confirmation %>
+<%= f.submit "Create my account" %>
+
+<% end %>
+

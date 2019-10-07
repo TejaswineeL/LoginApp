@@ -1,0 +1,4 @@
+t.string :gender
+      t.string :DOB
+      t.string :address
+      t.string :phone
